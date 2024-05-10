@@ -1,9 +1,15 @@
-//alert("webpack is working");
-homeBtn = document.querySelector("#home");
-menuBtn = document.querySelector("#menu");
-locateBtn = document.querySelector("#location");
+//import _ from 'lodash';
+import Cover from './images/GhostKitchen01.png';
+import './style.css';
+import {makeHome} from './home.js';
+import {makeMenu} from './menu.js';
+import {makeLocate} from './location.js';
 
-contentDiv = document.querySelector("#content");
+const homeBtn = document.querySelector("#home");
+const menuBtn = document.querySelector("#menu");
+const locateBtn = document.querySelector("#location");
+
+const contentDiv = document.querySelector("#content");
 
 function menuItem(name,desc,price) {
     name = name;
@@ -11,22 +17,8 @@ function menuItem(name,desc,price) {
     price = price;
 }
 
-
-function makeHome() {
-    contentDiv.textContent = "HOME PRESSED"
-    //Home page will show a welcome message, restaurant about, promo images
-}
-
-function makeMenu() {
-    contentDiv.textContent = "MENU PRESSED"
-    //Show the menu with items, description and price
-}
-
-function makeLocate() {
-    contentDiv.textContent = "LOCATION PRESSED"
-    //Address, opening times, contact info
-}
-
 homeBtn.addEventListener("click",makeHome);
 menuBtn.addEventListener("click",makeMenu);
 locateBtn.addEventListener("click",makeLocate);
+
+makeHome();
