@@ -1,3 +1,11 @@
 * {
-    color: red;
+
+}
+@font-face{
+    font-family: ghostly;
+    src: url(./fonts/ghostly.TTF);
+}
+header h1{
+    font-family: ghostly;
+    font-size: 64px;
 }
